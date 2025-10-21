@@ -12,7 +12,7 @@ SO = platform.system()
 if SO == "Darwin":
     PERSONAJE = "Albert Einstein"; EMOJI_PERSONAJE = "🧑‍🔬"; VOZ = "Juan"
 elif SO == "Windows":
-    PERSONAJE = "Marie Curie"; EMOJI_PERSONAJE = "👩‍🔬"; VOZ = "Sabina"  # o "Zira"
+    PERSONAJE = "Marie Curie"; EMOJI_PERSONAJE = "👩‍🔬"; VOZ = "Zira"  # o "Sabrina"
 else:
     PERSONAJE = "Personaje"; EMOJI_PERSONAJE = "🧑‍🔬"; VOZ = None
 
@@ -155,7 +155,7 @@ def main(page: ft.Page):
     )       
             
 
-    boton_enviar = ft.ElevatedButton("Enviar", on_click=enviar_click_streaming, bgcolor=ft.Colors.BLUE_400, color=ft.Colors.WHITE)
+    boton_enviar = ft.ElevatedButton("Enviar", on_click=enviar_click_streaming, bgcolor=ft.Colors.BLACK, color=ft.Colors.WHITE)
     prompt.on_submit = enviar_click_streaming
 
     page.add(
@@ -164,7 +164,7 @@ def main(page: ft.Page):
                 header,
                 mensajes,
                 ft.Row([
-                    ft.ElevatedButton("🎤 Probar voz", on_click=probar_voz, bgcolor=ft.Colors.GREEN_400, color=ft.Colors.WHITE),
+                    ft.ElevatedButton("🎤 Probar voz", on_click=probar_voz, bgcolor=ft.Colors.BLACK26, color=ft.Colors.WHITE),
                     ft.TextButton("🧹 Limpiar chat", on_click=limpiar_chat),
                 ], alignment=ft.MainAxisAlignment.START, spacing=10),
                 ft.Row([prompt, boton_enviar], vertical_alignment=ft.CrossAxisAlignment.END),
